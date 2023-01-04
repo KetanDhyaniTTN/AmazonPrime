@@ -1,10 +1,9 @@
-import React, { Component } from "react";
-import { SafeAreaView,View,StyleSheet } from "react-native";
+import React from "react";
+import { SafeAreaView,StyleSheet } from "react-native";
 import Video from "react-native-video";
 
 const Player=({route,navigation})=>{
     const show = route.params.result
-
         return(
             <SafeAreaView>
                 <Video 

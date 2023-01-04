@@ -2,29 +2,22 @@ import React, { Component } from "react";
 import { View, StyleSheet, Image } from "react-native"
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import HomePage from "./Home";
-import { NavigationContainer } from "@react-navigation/native";
+import Store from "./StoreScreen";
+import Find from "./Find";
 const Tab = createBottomTabNavigator()
 
 class TabBar extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            activeBtn: 'Home'
-        };
-    }
+    
     render() {
         return (
 
             <Tab.Navigator
-            
                 screenOptions={{
-                    tabBarActiveTintColor: ('rgb(171,172,173)'),
                     tabBarStyle: {
                         backgroundColor: 'black',
                         height:84,
-                    
                     },
-                    tabBarActiveTintColor: ('rgb(71,162,212)'),
+                     tabBarActiveTintColor: ('rgb(71,162,212)'),
                     tabBarInactiveTintColor:'white'
                 }} >
                 <Tab.Screen name="Home" component={HomePage}
@@ -37,7 +30,7 @@ class TabBar extends Component {
                         )
                     }} />
 
-                <Tab.Screen name="Store" component={HomePage}
+                <Tab.Screen name="Store" component={Store}
                     options={{
                         headerShown: false,
                         tabBarIcon: ({ color, size }) => (
@@ -58,7 +51,7 @@ class TabBar extends Component {
                         )
                     }} />
 
-                <Tab.Screen name="Find" component={HomePage}
+                <Tab.Screen name="Find" component={Find}
                     options={{
                         headerShown: false,
                         tabBarIcon: ({ color, size }) => (

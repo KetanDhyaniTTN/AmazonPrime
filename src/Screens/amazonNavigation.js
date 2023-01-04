@@ -4,6 +4,7 @@ import { NavigationContainer } from "@react-navigation/native";
 import TabBar from "./TabBar";
 import SecondScreen from "./SecondScreen";
 import Player from "./PlayScreen";
+
 const Stack = createNativeStackNavigator();
 
 class HomeScreen extends Component {
@@ -13,9 +14,10 @@ class HomeScreen extends Component {
                 <Stack.Navigator>
                     <Stack.Screen name="Home" component={TabBar}
                         options={{ headerShown: false }} />
-                    <Stack.Screen name="SecondScreen" component={SecondScreen}
+                    <Stack.Screen name="DetailScreen" component={SecondScreen}
                         options={{ headerShown: true }} />
-                    <Stack.Screen name="PlayerScreen" component={Player}
+                    <Stack.Screen name="PlayerScreen" component={Player} 
+                    
                         options={{ headerShown: true }} />
                 </Stack.Navigator>
             </NavigationContainer>

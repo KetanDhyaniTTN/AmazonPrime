@@ -4,7 +4,7 @@ export const showData=()=>(dispatch)=>{
 
     let info = require('../../Data.json');
     let res = info.DATA
-    //console.log(res)
+   
      dispatch({
         
          type:SHOW_DATA,
